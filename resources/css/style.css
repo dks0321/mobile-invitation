@@ -309,7 +309,6 @@ body.scroll-lock { overflow: hidden; }
 	text-align: center;
 	background: #f0f4ff;
 }
-.sc-location .tit {font-family: "";}
 .sc-location .link-tel {
 	display: flex;
 	justify-content: center;
