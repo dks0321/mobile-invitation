@@ -194,7 +194,7 @@ body.scroll-lock { overflow: hidden; }
 	color: #fff;
 	text-align: center;
 }
-.sub-txt {font-size: 1.8rem;color: #fff;text-align: center;}
+.sub-txt {font-size: 2rem;color: #fff;text-align: center;}
 .main .wedding-info-area {padding-bottom: 2rem;}
 .main .wedding-info-area .location-box {
 	text-align: center;
@@ -268,7 +268,7 @@ body.scroll-lock { overflow: hidden; }
 	margin-left: 0.6rem;
 	width: 1.8rem;
 }
-.sc-calendar {padding: 8rem 0;}
+.sc-calendar {padding: 10rem 0;}
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
@@ -282,7 +282,7 @@ body.scroll-lock { overflow: hidden; }
 	font-weight: 500;
 }
 .sc-calendar .calendar-box {
-	margin: 3rem 0 4rem;
+	margin: 4rem 0;
 }
 .sc-calendar .calendar-box img {
 	display: block;
@@ -295,7 +295,7 @@ body.scroll-lock { overflow: hidden; }
 	gap: 5px;
 	font-size: 1.8rem;
 }
-.dDay {font-weight: 600;font-size: 1.6rem;}
+/* .dDay {font-size: 1.6rem;} */
 .sc-calendar .ico-love {
 	width: 2rem;
 	height: 2rem;
@@ -303,7 +303,7 @@ body.scroll-lock { overflow: hidden; }
 	background-size: contain;
 	animation: bounce 1.5s ease-in-out infinite;
 }
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-1px); } 50% { transform: translateY(0); } 70% { transform: translateY(-2px); } }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-2px); } 50% { transform: translateY(0); } 70% { transform: translateY(-2px); } }
 .sc-location {
 	padding: 6rem 0 3rem;
 	text-align: center;
