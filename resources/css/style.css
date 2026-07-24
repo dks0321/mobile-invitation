@@ -4,10 +4,17 @@
 	font-weight: 400;
 	src: url("font/GowunBatang-Regular.ttf") format("truetype");
 }
+
 @font-face {
 	font-family: "Gowun dodum";
 	font-style: normal;
 	font-weight: 400;
+	src: url("font/GowunDodum-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Gowun Batang";
+	font-style: normal;
+	font-weight: 600;
 	src: url("font/GowunDodum-Regular.ttf") format("truetype");
 }
 
@@ -253,7 +260,7 @@ body.scroll-lock { overflow: hidden; }
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
-	font-family: "Lora", serif;
+	font-family: "Lora", "Gowun Batang", "Gowun dodum" serif;
 	text-align: center;
 }
 .sc-calendar .txt {
