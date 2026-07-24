@@ -216,7 +216,7 @@ body.scroll-lock { overflow: hidden; }
 .sc-greeting {
 	position: relative;
 	background: linear-gradient(#dbe6ff, #ffffff);
-	padding: 10rem 2rem 0;
+	padding: 10rem 2rem;
 }
 .sc-greeting .ico {
 	position: absolute;
@@ -258,14 +258,10 @@ body.scroll-lock { overflow: hidden; }
 	display: flex;
 	align-items: center;
 }
-.sc-greeting .parent {
-}
 .sc-greeting .host {
 	margin-left: 1.6rem;
 	display: flex;
 	align-items: center;
-}
-.sc-greeting .host .phone {
 }
 .sc-greeting .host .phone img {
 	display: block;
@@ -307,27 +303,13 @@ body.scroll-lock { overflow: hidden; }
 	background-size: contain;
 	animation: bounce 1.5s ease-in-out infinite;
 }
-@keyframes bounce {
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-	30% {
-		transform: translateY(-1px);
-	}
-	50% {
-		transform: translateY(0);
-	}
-	70% {
-		transform: translateY(-2px);
-	}
-}
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-1px); } 50% { transform: translateY(0); } 70% { transform: translateY(-2px); } }
 .sc-location {
 	padding: 6rem 0 3rem;
 	text-align: center;
 	background: #f0f4ff;
 }
-.sc-location .tit { }
+.sc-location .tit {font-family: "";}
 .sc-location .link-tel {
 	display: flex;
 	justify-content: center;
@@ -499,8 +481,6 @@ body.scroll-lock { overflow: hidden; }
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 0.5rem;
-}
-.account-info {
 }
 .account-num {color: #000;}
 .bank {color: #000;}
