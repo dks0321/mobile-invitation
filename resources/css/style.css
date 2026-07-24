@@ -178,8 +178,7 @@ body.scroll-lock { overflow: hidden; }
 	color: #fff;
 	text-align: center;
 }
-.main .wedding-info-area {
-}
+.main .wedding-info-area {padding-bottom: 2rem;}
 .main .wedding-info-area .location-box {
 	text-align: center;
 }
@@ -190,7 +189,7 @@ body.scroll-lock { overflow: hidden; }
 }
 .main .wedding-info-area .address {
 	margin-top: 3px;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	color: #fff;
 }
 .main .date-txt {
