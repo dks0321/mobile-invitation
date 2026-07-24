@@ -38,11 +38,13 @@ $(function () {
     //텍스트 애니메이션
     var $greetingTxt = $('.group-greeting');
 
-    $greetingTxt.hide();
+    // $greetingTxt.hide();
 
     function showGreeting() {
         if ($(window).scrollTop() >= 300) {
-            $greetingTxt.fadeIn(1700);
+            $greetingTxt.animate({
+                opacity: 1
+              }, 1700);
             $(window).off('scroll', showGreeting);
         }
     }

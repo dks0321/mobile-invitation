@@ -4,7 +4,12 @@
 	font-weight: 400;
 	src: url("font/GowunBatang-Regular.ttf") format("truetype");
 }
-
+@font-face {
+	font-family: "Gowun Batang";
+	font-style: normal;
+	font-weight: 600;
+	src: url("font/GowunBatang-Bold.ttf") format("truetype");
+}
 @font-face {
 	font-family: "Gowun dodum";
 	font-style: normal;
@@ -12,10 +17,22 @@
 	src: url("font/GowunDodum-Regular.ttf") format("truetype");
 }
 @font-face {
-	font-family: "Gowun Batang";
+	font-family: "Inria";
+	font-style: normal;
+	font-weight: 700;
+	src: url("font/InriaSerif-Bold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Lora";
 	font-style: normal;
 	font-weight: 600;
-	src: url("font/GowunDodum-Regular.ttf") format("truetype");
+	src: url("font/Lora-SemiBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "Lora";
+	font-style: normal;
+	font-weight: 500;
+	src: url("font/Lora-Regular.ttf") format("truetype");
 }
 
 /* reset */
@@ -154,7 +171,7 @@ body.scroll-lock { overflow: hidden; }
 	margin: 0 auto;
 	overflow-x: hidden;
 }
-.bgm {position: absolute;top: 2rem;right: 2rem;height: 2rem;}
+.bgm {position: absolute;top: 1rem;right: 1rem;height: 2rem;}
 .main {
 	width: 100%;
 	height: 100dvh;
@@ -171,13 +188,13 @@ body.scroll-lock { overflow: hidden; }
 }
 .main .name {
 	font-size: 3.2rem;
-	/* font-family: "Spectral", serif; */
-	font-family: "Lora", serif;
-	font-weight: 300;
+	font-family: "Inria", serif;
+	letter-spacing: 1px;
 	font-style: normal;
 	color: #fff;
 	text-align: center;
 }
+.sub-txt {font-size: 1.8rem;color: #fff;text-align: center;}
 .main .wedding-info-area {padding-bottom: 2rem;}
 .main .wedding-info-area .location-box {
 	text-align: center;
@@ -212,7 +229,7 @@ body.scroll-lock { overflow: hidden; }
 .group-greeting {
 	position: relative;
 	z-index: 1;
-	height: 490px;
+	opacity: 0;
 }
 .sc-greeting .greeting-txt {
 	margin-top: 7rem;
@@ -259,12 +276,12 @@ body.scroll-lock { overflow: hidden; }
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
-	font-family: "Inria Serif", serif;
+	font-family: "Lora", serif;
 	text-align: center;
 }
 .sc-calendar .txt {
 	margin-top: 1.2rem;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	text-align: center;
 	font-weight: 500;
 }
@@ -280,7 +297,7 @@ body.scroll-lock { overflow: hidden; }
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 }
 .dDay {font-weight: 600;font-size: 1.6rem;}
 .sc-calendar .ico-love {
@@ -317,6 +334,7 @@ body.scroll-lock { overflow: hidden; }
 	align-items: center;
 	gap: 5px;
 	margin: 2.4rem 0 0.5rem;
+	font-size: 1.5rem;
 }
 .sc-location .ico-tel {
 	width: 1.6rem;
@@ -420,8 +438,8 @@ body.scroll-lock { overflow: hidden; }
     right:20px;
     top:20px;
     z-index:10;
-	width: 2rem;
-	height: 2rem;
+	width: 2.4rem;
+	height: 2.4rem;
 	background: url(../img/btn_close_circle.png) no-repeat center;background-size: contain;
 }
 .group-gallery .btn-more {
@@ -437,12 +455,9 @@ body.scroll-lock { overflow: hidden; }
 	padding: 0 0 4rem;
 	text-align: center;
 }
-.sc-account .tit {
-}
-.sc-account .txt {
-	margin-top: 3.2rem;
-}
-.sc-account .account-box {
+.sc-account .tit {font-family:"Gowun Batang", sans-serif ; }
+.sc-account .txt { margin-top: 3.2rem; }
+.account-box {
 	margin: 3.2rem 0 0;
 	width: 100%;
 	padding: 0 1.8rem;
@@ -452,7 +467,8 @@ body.scroll-lock { overflow: hidden; }
 	overflow: hidden;
 	transition: 0.3s;
 }
-.sc-account .account-box.on {height: auto;}
+.account-box:last-child {margin-top: 1.8rem;} 
+.account-box.on {height: auto;}
 .sc-account .btn-accordian {
 	display: flex;
 	justify-content: space-between;
