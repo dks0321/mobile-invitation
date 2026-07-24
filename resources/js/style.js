@@ -38,8 +38,6 @@ $(function () {
     //텍스트 애니메이션
     var $greetingTxt = $('.group-greeting');
 
-    $greetingTxt.hide();
-
     function showGreeting() {
         if ($(window).scrollTop() >= 300) {
             $greetingTxt.fadeIn(1700);
