@@ -154,10 +154,11 @@ body.scroll-lock { overflow: hidden; }
 	margin: 0 auto;
 	overflow-x: hidden;
 }
+.bgm {position: absolute;top: 2rem;right: 2rem;height: 2rem;}
 .main {
 	width: 100%;
 	height: 100dvh;
-	/* background: rgb(50, 167, 50); */
+	/* background: rgb(129, 158, 129); */
 	background: url(../img/main.jpg) no-repeat center;
 	background-size: cover;
 }
@@ -212,8 +213,7 @@ body.scroll-lock { overflow: hidden; }
 .group-greeting {
 	position: relative;
 	z-index: 1;
-	height: 100%;
-	min-height: 490px;
+	height: 490px;
 }
 .sc-greeting .greeting-txt {
 	margin-top: 7rem;
@@ -260,7 +260,7 @@ body.scroll-lock { overflow: hidden; }
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
-	font-family: "Lora", "Gowun Batang", "Gowun dodum" serif;
+	font-family: "Inria Serif", serif;
 	text-align: center;
 }
 .sc-calendar .txt {
@@ -281,6 +281,7 @@ body.scroll-lock { overflow: hidden; }
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
+	font-size: 1.6rem;
 }
 .dDay {font-weight: 600;font-size: 1.6rem;}
 .sc-calendar .ico-love {
@@ -330,6 +331,7 @@ body.scroll-lock { overflow: hidden; }
 	align-items: center;
 	gap: 5px;
 	margin: 0 auto;
+	font-size: 1.5rem;
 }
 .sc-location .ico-copy {
 	width: 1.5rem;
@@ -475,8 +477,8 @@ body.scroll-lock { overflow: hidden; }
 .account-list { padding: 0 0 1rem; }
 .account-list.on {height: auto;}
 .account-item { padding: 0.8rem 0; text-align: left; }
-.account-item .groom {color: brown;font-weight: 500;}
-.account-item .bride {color: green;font-weight: 500;}
+.account-item .groom {color: green;font-weight: 500;}
+.account-item .bride {color: sienna;font-weight: 500;}
 .account-item .left-box {
 	display: flex;
 	justify-content: space-between;
