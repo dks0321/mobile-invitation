@@ -1,4 +1,16 @@
 @font-face {
+	font-family: "Francisco";
+	font-style: normal;
+	font-weight: 500;
+	src: url("font/FranciscoDemo.ttf") format("truetype");
+}
+@font-face {
+	font-family: "black sword";
+	font-style: normal;
+	font-weight: 500;
+	src: url("font/Blacksword.otf") format("otf");
+}
+@font-face {
 	font-family: "Gowun Batang";
 	font-style: normal;
 	font-weight: 400;
@@ -162,8 +174,12 @@ input {
 	cursor: pointer;
 	border: none;
 }
-input[type="radio"] { appearance: inherit; }
-body.scroll-lock { overflow: hidden; }
+input[type="radio"] {
+	appearance: inherit;
+}
+body.scroll-lock {
+	overflow: hidden;
+}
 
 .container {
 	max-width: 72rem;
@@ -171,7 +187,17 @@ body.scroll-lock { overflow: hidden; }
 	margin: 0 auto;
 	overflow-x: hidden;
 }
-.bgm {position: absolute;top: 1rem;right: 1rem;height: 2rem;}
+.bgm-box {
+	width: 4rem;
+	border-radius: 5rem;
+	overflow: hidden;
+}
+.bgm {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	height: 2rem;
+}
 .main {
 	width: 100%;
 	height: 100vh;
@@ -187,15 +213,26 @@ body.scroll-lock { overflow: hidden; }
 	padding: 10rem 0 2rem;
 }
 .main .name {
-	font-size: 3.2rem;
+	font-size: 1.2rem;
 	font-family: "Inria", serif;
+	font-family: "black sword", serif;
 	letter-spacing: 1px;
 	font-style: normal;
 	color: #fff;
 	text-align: center;
 }
-.sub-txt {font-size: 1.8rem;color: #fff;text-align: center;}
-.main .wedding-info-area {padding-bottom: 2rem;}
+.sub-txt {
+	margin-top: 1rem;
+	font-size: 13rem;
+	line-height: 7rem;
+	color: #fff;
+	font-family: "Francisco", serif;
+	text-align: center;
+	transform: rotate(352deg);
+}
+.main .wedding-info-area {
+	padding-bottom: 5rem;
+}
 .main .wedding-info-area .location-box {
 	text-align: center;
 }
@@ -268,7 +305,9 @@ body.scroll-lock { overflow: hidden; }
 	margin-left: 0.6rem;
 	width: 1.8rem;
 }
-.sc-calendar {padding: 10rem 0;}
+.sc-calendar {
+	padding: 10rem 0;
+}
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
@@ -302,7 +341,21 @@ body.scroll-lock { overflow: hidden; }
 	background-size: contain;
 	animation: bounce 1.5s ease-in-out infinite;
 }
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-2px); } 50% { transform: translateY(0); } 70% { transform: translateY(-2px); } }
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(-2px);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	70% {
+		transform: translateY(-2px);
+	}
+}
 .sc-location {
 	padding: 9rem 0 5rem;
 	text-align: center;
@@ -393,35 +446,58 @@ body.scroll-lock { overflow: hidden; }
 	margin-top: 1.4rem;
 	text-align: center;
 }
-.gallery-list {display: grid;grid-template-columns: 1fr 1fr 1fr;gap: 10px;margin-top: 2rem;/*height: 325px;overflow: hidden;*/}
-.gallery-item {background: pink;height: 100px;box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 10%);}
-.gallery-item img {width: 100%;}
-.gallery-item:nth-child(even) {background: green;}
-.gallery-popup{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.95);
-    z-index:9999;
+.gallery-list {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 10px;
+	margin-top: 2rem; /*height: 325px;overflow: hidden;*/
 }
-.gallerySwiper{
-    width:100%;
-    height:100%;
+.gallery-item {
+	background: pink;
+	height: 100px;
+	box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 10%);
 }
-.swiper-button-next, .swiper-button-prev {color:#fff;width: 2.4rem;height: 2.4rem;}
-.swiper-button-prev {left: 15px !important;}
-.swiper-button-next {right: 15px !important;}
-.popup-img{
-    width:100%;
-    height:100%;
+.gallery-item img {
+	width: 100%;
 }
-.btn-close{
-    position:absolute;
-    right:20px;
-    top:20px;
-    z-index:10;
+.gallery-item:nth-child(even) {
+	background: green;
+}
+.gallery-popup {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.95);
+	z-index: 9999;
+}
+.gallerySwiper {
+	width: 100%;
+	height: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+	color: #fff;
 	width: 2.4rem;
 	height: 2.4rem;
-	background: url(../img/btn_close_circle.png) no-repeat center;background-size: contain;
+}
+.swiper-button-prev {
+	left: 15px !important;
+}
+.swiper-button-next {
+	right: 15px !important;
+}
+.popup-img {
+	width: 100%;
+	height: 100%;
+}
+.btn-close {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 10;
+	width: 2.4rem;
+	height: 2.4rem;
+	background: url(../img/btn_close_circle.png) no-repeat center;
+	background-size: contain;
 }
 .group-gallery .btn-more {
 	display: block;
@@ -436,8 +512,12 @@ body.scroll-lock { overflow: hidden; }
 	padding: 8rem 0;
 	text-align: center;
 }
-.sc-account .tit {font-family:"Gowun Batang", sans-serif ; }
-.sc-account .txt { margin-top: 3.2rem; }
+.sc-account .tit {
+	font-family: "Gowun Batang", sans-serif;
+}
+.sc-account .txt {
+	margin-top: 3.2rem;
+}
 .account-box {
 	margin: 3.2rem 0 0;
 	width: 100%;
@@ -448,8 +528,12 @@ body.scroll-lock { overflow: hidden; }
 	overflow: hidden;
 	transition: 0.3s;
 }
-.account-box:last-child {margin-top: 1.8rem;} 
-.account-box.on {height: auto;}
+.account-box:last-child {
+	margin-top: 1.8rem;
+}
+.account-box.on {
+	height: auto;
+}
 .sc-account .btn-accordian {
 	display: flex;
 	justify-content: space-between;
@@ -469,21 +553,43 @@ body.scroll-lock { overflow: hidden; }
 	transform: rotate(-90deg);
 	transition: 0.3s;
 }
-.account-box.on .btn-accordian::after { transform: rotate(90deg); }
-.account-list { padding: 0 0 1rem; }
-.account-list.on {height: auto;}
-.account-item { padding: 0.8rem 0; text-align: left; }
-.account-item .groom {color: green;font-weight: 500;}
-.account-item .bride {color: sienna;font-weight: 500;}
+.account-box.on .btn-accordian::after {
+	transform: rotate(90deg);
+}
+.account-list {
+	padding: 0 0 1rem;
+}
+.account-list.on {
+	height: auto;
+}
+.account-item {
+	padding: 0.8rem 0;
+	text-align: left;
+}
+.account-item .groom {
+	color: green;
+	font-weight: 500;
+}
+.account-item .bride {
+	color: sienna;
+	font-weight: 500;
+}
 .account-item .left-box {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 0.5rem;
 }
-.account-num {color: #000;}
-.bank {color: #000;}
-.account-item .btn-copy {color: #555;font-weight: 600;}
+.account-num {
+	color: #000;
+}
+.bank {
+	color: #000;
+}
+.account-item .btn-copy {
+	color: #555;
+	font-weight: 600;
+}
 footer {
 	padding: 4rem 0;
 	text-align: center;
