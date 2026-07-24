@@ -374,6 +374,7 @@ body.scroll-lock { overflow: hidden; }
 	margin-top: 2.4rem;
 	font-size: 1.5rem;
 	text-align-last: left;
+	font-family: "Gowun dodum", sans-serif;
 }
 .sc-location .public-transit .txt {
 	margin-top: 0.8rem;
