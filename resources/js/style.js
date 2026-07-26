@@ -3,7 +3,7 @@ $(function () {
     //파티클
     let isRunning = true;
 
-    const duration = 1000 * 60; // 최대 1분
+    const duration = 1000 * 120; // 최대 2분
     const animationEnd = Date.now() + duration;
 
     const interval = setInterval(function () {
@@ -30,11 +30,6 @@ $(function () {
         });
     }, 350);
 
-    // 스크롤하면 종료
-    // $(window).one('scroll', function () {
-    //     isRunning = false;
-    // });
-
     //텍스트 애니메이션
     var $greetingTxt = $('.group-greeting');
 
@@ -44,7 +39,7 @@ $(function () {
         if ($(window).scrollTop() >= 300) {
             $greetingTxt.animate({
                 opacity: 1
-              }, 1700);
+            }, 2000);
             $(window).off('scroll', showGreeting);
         }
     }
@@ -138,7 +133,167 @@ $(function () {
     updateDday();
     setInterval(updateDday, 60000); // 1분마다만 갱신
 
-    //account
+
+    // 디데이 타이핑 이벤트
+    const $calendar = $('.sc-calendar');
+    const $ddayBox = $('.dday-box');
+
+    let isTypingStart = false;
+
+    function startTyping() {
+
+        if (isTypingStart) return;
+
+        isTypingStart = true;
+
+
+        const contents = $ddayBox.contents().toArray();
+
+        $ddayBox.empty().addClass('typing');
+
+        const queue = [];
+
+
+        // 기존 HTML 구조 저장
+        $.each(contents, function (_, node) {
+
+            // 텍스트
+            if (node.nodeType === 3) {
+                [...node.textContent].forEach(char => {
+                    queue.push({
+                        type: 'text',
+                        value: char
+                    });
+                });
+            }
+
+            // 태그(i, span)
+            else {
+                queue.push({
+                    type: 'html',
+                    value: $(node).clone()
+                });
+            }
+        });
+
+        let index = 0;
+        let $text = null;
+
+        function typing() {
+            // 종료
+            if (index >= queue.length) {
+
+                $ddayBox
+                    .removeClass('typing')
+                    .addClass('done');
+
+                return;
+            }
+
+            const item = queue[index];
+
+            // 아이콘 / span 처리
+            if (item.type === 'html') {
+
+                $text = null;
+
+                const $clone = item.value;
+
+                $ddayBox.append($clone);
+
+                // 하트 애니메이션
+                if ($clone.hasClass('ico-love')) {
+                    setTimeout(function () {
+                        $clone.addClass('show');
+                    }, 100);
+                    index++;
+                    setTimeout(typing, 500);
+                    return;
+                }
+
+                // D-Day 타이핑
+                if ($clone.hasClass('dDay')) {
+                    const ddayText = $clone.text();
+                    $clone.text('');
+
+                    let d = 0;
+
+                    function typeDday() {
+                        if (d >= ddayText.length) {
+                            index++;
+                            setTimeout(typing, 300);
+                            return;
+                        }
+
+                        $clone.append(ddayText.charAt(d));
+                        d++;
+                        setTimeout(typeDday, 100);
+
+                    }
+
+                    typeDday();
+                    return;
+                }
+                index++;
+                setTimeout(typing, 200);
+                return;
+            }
+
+            // 일반 텍스트
+            if (!$text) {
+
+                $text = $('<span class="typing-word"></span>');
+
+                $ddayBox.append($text);
+
+            }
+            $text.append(item.value);
+
+            // 공백 후 새 span 생성
+            if (item.value === ' ') {
+                $text = null;
+            }
+
+            index++;
+
+            // 타이핑 속도
+            let speed = 90 + Math.random() * 80;
+
+            // 희수 / 경서 천천히
+            if (index < 5) {
+                speed = 180;
+            }
+
+            // 결혼식 부분
+            if (index > 8) {
+                speed = 130;
+            }
+
+            setTimeout(typing, speed);
+        }
+        typing();
+    }
+
+    // sc-calendar 화면 도달 체크
+    let isTyping = false;
+
+    // sc-calendar 문서 기준 top 값
+    const calendarTop = $calendar.offset().top;
+
+    $(window).on('scroll', function () {
+
+        const dayScrollTop = $(window).scrollTop();
+
+        // 캘린더 위치 도달 시 실행
+        if (dayScrollTop >= calendarTop && !isTyping) {
+            isTyping = true;
+            startTyping(); // 기존 타이핑 함수 실행
+
+        }
+
+    });
+
+    //계좌 펼치기/접기
     $('.btn-accordian').click(function () {
         var $accountBtn = $(this).parent();
 
