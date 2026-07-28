@@ -3,7 +3,7 @@ $(function () {
     //파티클
     let isRunning = true;
 
-    const duration = 1000 * 120; // 최대 2분
+    const duration = 1000 * 90; // 최대 90초
     const animationEnd = Date.now() + duration;
 
     const interval = setInterval(function () {
@@ -257,16 +257,16 @@ $(function () {
             index++;
 
             // 타이핑 속도
-            let speed = 90 + Math.random() * 80;
+            let speed = 90 + Math.random() * 60;
 
             // 희수 / 경서 천천히
             if (index < 5) {
-                speed = 180;
+                speed = 130;
             }
 
             // 결혼식 부분
             if (index > 8) {
-                speed = 130;
+                speed = 100;
             }
 
             setTimeout(typing, speed);
