@@ -190,7 +190,7 @@ body.scroll-lock {
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-	height: 4rem;
+	height: 2.5rem;
 }
 .main {
 	width: 100%;
@@ -225,12 +225,12 @@ body.scroll-lock {
 	margin-left: 1rem;
 	font-size: 13rem;
 	line-height: 7rem;
-	color: #F8F4E8;
+	color: #f8f4e8;
 	font-family: "Francisco", serif;
 	text-align: center;
 	transform: rotate(352deg);
 	opacity: 0;
-	animation: write 3.5s steps(30, end) forwards;
+	animation: write 4s steps(30, end) forwards;
 }
 .main .wedding-info-area {
 	padding-bottom: 3rem;
@@ -319,20 +319,72 @@ body.scroll-lock {
 }
 .sc-calendar {
 	position: relative;
-	height: 58vh;
+	min-height: 488px;
 	background: #fff;
 	overflow: hidden;
 	/* background: url(../img/calendar-bg.png) no-repeat center; */
 }
-.sc-calendar .group-calendar {position: absolute;top: 0;width: 100%;padding: 9rem 2rem;z-index: 1;}
-.calendar_area {margin-top: 2.4rem;}
-.calendar_area .week_box {display: flex;align-items: center;}
-.calendar_area .week {flex: 1;height: 4rem;line-height: 4rem;border-top: 1px solid #999;border-bottom: 1px solid #999;font-family: "Lora", serif;font-weight: 500;color: #3b3b3b;;text-align: center;}
-.calendar_area .date_box {display: flex;align-items: center;}
-.calendar_area .date {flex: 1;height: 5rem;line-height: 5rem;font-weight: 600;font-family: "Lora", serif;text-align: center;border-bottom: 1px solid #999;}
-.calendar_area .date:last-child {position: relative;}
-.calendar_area .date:last-child::after {position: absolute;top: 2px;left: 50%;transform: translateX(-50%);display: block;content: '♡';clear: both;width: 5rem;height: 5rem;font-size: 4rem;font-weight: 400;color: rgb(207, 0, 0);}
-.calendar-bg {position: absolute;opacity: 0.4;top: -628px; left: 0;}
+.sc-calendar .group-calendar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	padding: 9rem 2rem;
+	z-index: 1;
+}
+.calendar_area {
+	margin-top: 2.4rem;
+}
+.calendar_area .week_box {
+	display: flex;
+	align-items: center;
+}
+.calendar_area .week {
+	flex: 1;
+	height: 4rem;
+	line-height: 4rem;
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
+	font-family: "Lora", serif;
+	font-weight: 500;
+	color: #3b3b3b;
+	text-align: center;
+}
+.calendar_area .date_box {
+	display: flex;
+	align-items: center;
+}
+.calendar_area .date {
+	flex: 1;
+	height: 5rem;
+	line-height: 5rem;
+	font-weight: 600;
+	font-family: "Lora", serif;
+	text-align: center;
+	border-bottom: 1px solid #999;
+}
+.calendar_area .date:last-child {
+	position: relative;
+}
+.calendar_area .date:last-child::after {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	content: "♡";
+	clear: both;
+	width: 5rem;
+	height: 5rem;
+	font-size: 4rem;
+	font-weight: 400;
+	color: rgb(207, 0, 0);
+}
+.calendar-bg {
+	position: absolute;
+	opacity: 0.4;
+	top: -628px;
+	left: 0;
+}
 .tit {
 	font-size: 2.2rem;
 	text-transform: uppercase;
@@ -340,10 +392,12 @@ body.scroll-lock {
 	text-align: center;
 }
 .sc-calendar .txt {
-	margin-top: 1.2rem;
 	font-size: 1.6rem;
 	text-align: center;
 	font-weight: 500;
+}
+.sc-calendar .txt:first-of-type {
+	margin-top: 1.2rem;
 }
 .sc-calendar .calendar-box {
 	margin: 4rem 0;
@@ -444,7 +498,8 @@ body.scroll-lock {
 .sc-location {
 	padding: 9rem 0 5rem;
 	text-align: center;
-	background: #f0f4ff;
+	/* background: #f0f4ff; */
+	background: linear-gradient(#f0f4ff 5%, #fffada);
 }
 .sc-location .link-tel {
 	display: flex;
@@ -523,7 +578,8 @@ body.scroll-lock {
 }
 .sc-gallery {
 	padding: 9rem 2rem;
-	background: #fff;
+	/* background: #fff; */
+	background: linear-gradient(#fffada 5%, #f0f4ff);
 }
 .sc-gallery .tit {
 	text-align: center;
