@@ -499,7 +499,7 @@ body.scroll-lock {
 	padding: 9rem 0 5rem;
 	text-align: center;
 	/* background: #f0f4ff; */
-	background: linear-gradient(#f0f4ff 5%, #fffceb);
+	background: linear-gradient(#f0f4ff 8%, #fffceb);
 }
 .sc-location .link-tel {
 	display: flex;
