@@ -278,7 +278,7 @@ $(function () {
     let isTyping = false;
 
     // sc-calendar 문서 기준 top 값
-    const calendarTop = $calendar.offset().top - 350;
+    const calendarTop = $calendar.offset().top - 300;
 
     $(window).on('scroll', function () {
 

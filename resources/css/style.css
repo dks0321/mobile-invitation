@@ -595,15 +595,12 @@ body.scroll-lock {
 	margin-top: 2rem; /*height: 325px;overflow: hidden;*/
 }
 .gallery-item {
-	background: pink;
-	height: 100px;
+	height: 120px;
+	overflow: hidden;
 	box-shadow: 1px 1px 4px 1px rgb(0 0 0 / 10%);
 }
 .gallery-item img {
 	width: 100%;
-}
-.gallery-item:nth-child(even) {
-	background: green;
 }
 .gallery-popup {
 	position: fixed;
@@ -627,9 +624,10 @@ body.scroll-lock {
 .swiper-button-next {
 	right: 15px !important;
 }
-.popup-img {
+.gallery-popup img {
 	width: 100%;
 	height: 100%;
+	object-fit: fill;
 }
 .btn-close {
 	position: absolute;
