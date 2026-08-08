@@ -499,7 +499,7 @@ body.scroll-lock {
 	padding: 9rem 0 5rem;
 	text-align: center;
 	/* background: #f0f4ff; */
-	background: linear-gradient(#f0f4ff 5%, #fffada);
+	background: linear-gradient(#f0f4ff 5%, #fffceb);
 }
 .sc-location .link-tel {
 	display: flex;
@@ -579,7 +579,7 @@ body.scroll-lock {
 .sc-gallery {
 	padding: 9rem 2rem;
 	/* background: #fff; */
-	background: linear-gradient(#fffada 5%, #f0f4ff);
+	background: linear-gradient(#fffceb, #f0f4ff);
 }
 .sc-gallery .tit {
 	text-align: center;
